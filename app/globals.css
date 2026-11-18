@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 245, 238, 255;
+  --background-end-rgb: 245, 238, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer components {
+  .btn-lavender {
+    background-color: #d9bff0;
+    color: #000;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+
+  .btn-lavender:hover {
+    background-color: #c9a7e8;
+  }
+
+  .input-lavender {
+    background-color: #d9bff0;
+    color: #000;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    outline: none;
+  }
+
+  .input-lavender::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+/* Add these rules to your existing globals.css file */
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 245, 238, 255;
+  --background-end-rgb: 245, 238, 255;
+}
+
+/* Force all text to be black by default */
+@layer base {
+  html {
+    color: #000000;
+  }
+
+  body {
+    color: #000000;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  label {
+    color: #000000;
+  }
+}
